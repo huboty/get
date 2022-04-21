@@ -23,14 +23,14 @@ def adc(value):
             GPIO.output(dac[i], 0) 
         else:
             value += (1<<(7-i))
+    GPIO.output(dac, 0)
     return value
 
 try:
     while(1):
         result = adc(0)
         print (result, "{:.2f}V".format(adc(0)/256*3.3))
-        GPIO.output(dac, 0)
-        time.sleep(0.01)
+        time.sleep(0.001)
 
 
 finally:

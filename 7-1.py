@@ -43,7 +43,7 @@ def show_voltage(value):
 try:
     voltage_results = []
     counter = 0
-
+    
     # start charging
     start_time = time.time()
     GPIO.output(troyka, 1)

@@ -32,6 +32,7 @@ def adc():
             GPIO.output(dac[i], 0) 
         else:
             value += (1<<(7-i))
+    GPIO.output(dac, 0)
     return value
 
 # function to show voltage in binary form on leds

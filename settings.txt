@@ -1,2 +1,2 @@
-Discretization frequency: 24.20s
-Quantization step: 0.01V
+Discretization frequency: 24.20Hz
+Quantization step: 0.012890625V

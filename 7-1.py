@@ -77,14 +77,14 @@ try:
     with open("data.txt", 'w') as data:
         data.write('\n'.join([str(item) for item in voltage_results]))
     with open("settings.txt", 'w') as settings:
-        settings.write("Discretization frequency: {:.2f}s\n".format(len(voltage_results)/experiment_time))
-        settings.write("Quantization step: {:.2f}V".format(3.3/256))
+        settings.write("Discretization frequency: {:.2f}Hz\n".format(len(voltage_results)/experiment_time))
+        settings.write("Quantization step: {:f}V".format(3.3/256))
 
     # print experiment data
     print("Experiment time: {:.2f}s".format(experiment_time))
     print("Measurement period: {:.2f}s".format(experiment_time/len(voltage_results)))
     print("Discretization frequency: {:.2f}Hz".format(len(voltage_results)/experiment_time))
-    print("Quantization step: {:.2f}V".format(3.3/256))
+    print("Quantization step: {:f}V".format(3.3/256))
 
 # turning off GPIOs
 finally:
